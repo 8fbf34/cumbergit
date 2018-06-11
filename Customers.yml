@@ -1,0 +1,12 @@
+Customers:
+  - AccountNumber: 1
+    Name: 'Bill'
+    CreditLimit: 1000
+    LocalCurrency: 'USD'
+    FavoriteStore: 'Indianapolis'
+  - AccountNumber: 2
+    Name: 'Bob'
+    CreditLimit: 500
+    LocalCurrency: 'EUR'
+    FavoriteStore: 'Berlin'
+
