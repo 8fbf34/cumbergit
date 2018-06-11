@@ -9,4 +9,9 @@ Customers:
     CreditLimit: 500
     LocalCurrency: 'EUR'
     FavoriteStore: 'Berlin'
+  - AccountNumber: 3
+    Name: 'Kelli'
+    CreditLimit: 1500
+    LocalCurrency: 'USD'
+    FavoriteStore: 'Chicago'
 
