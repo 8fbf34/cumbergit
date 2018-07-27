@@ -3,9 +3,11 @@ package web
 var serviceConfig *Config
 
 type Config struct {
-	Source string
+	DefaultRoute  string
+	JsonRoute     []string
+	YamlRoute     []string
 }
 
 func NewConfig() Config {
-	return Config{}
+	return Config{DefaultRoute: "/api/customers"}
 }

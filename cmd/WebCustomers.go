@@ -11,7 +11,8 @@ func main() {
 	wg.Add(1)
 
 	config := web.NewConfig()
-	config.Source = "assets/Customers.json"
+	config.JsonRoute = []string{"json", "assets/Customers.json"}
+	config.YamlRoute = []string{"yaml", "assets/Customers.yml"}
 
 	err := web.Serve(config)
 	if err != nil {
