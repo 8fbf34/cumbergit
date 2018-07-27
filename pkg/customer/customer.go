@@ -5,11 +5,11 @@ import (
 )
 
 type Customer struct {
-	AccountNumber float64
-	Name string
-	CreditLimit float64
-	LocalCurrency string
-	FavoriteStore string
+	AccountNumber float64 `json:"accountNumber,omitempty",yaml:"accountNumber"`
+	Name          string  `json:"name,omitempty",yaml:"name"`
+	CreditLimit   float64 `json:"creditLimit,omitempty",yaml:"creditLimit"`
+	LocalCurrency string  `json:"localCurrency,omitempty",yaml:"localCurrency"`
+	FavoriteStore string  `json:"favoriteStore,omitempty",yaml:"favoriteStore"`
 }
 
 func (c Customer) String() string {
@@ -21,4 +21,3 @@ func (c Customer) String() string {
 	s += fmt.Sprintf("Favorite Store:\t%s\n", c.FavoriteStore)
 	return s
 }
-

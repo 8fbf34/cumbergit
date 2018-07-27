@@ -6,19 +6,25 @@ import (
 )
 
 func CollectAndProcess(fileName string) {
-	collect := getCollectorFor(fileName)
-
-	customers, err := collect(fileName)
+	collected, err := Collect(fileName)
 	if err != nil {
-		log.Fatalf("Encounted issue collecting customers from %s\nError: %s\n", fileName, err)
+		log.Printf("Issue encountered:\t%s\n", err)
+		return
 	}
+	Process(collected, fileName)
+}
 
+func Collect(fileName string) ([]Customer, error) {
+	collector := getCollectorFor(fileName)
+	return collector(fileName)
+}
+
+func Process(customers []Customer, fileName string) {
 	fmt.Printf("Using file:\t%s\n", fileName)
 
 	fmt.Printf("How many customers:\t%d\n\n", len(customers))
 
-	for _, customer := range(customers) {
+	for _, customer := range customers {
 		fmt.Println(customer)
 	}
 }
-

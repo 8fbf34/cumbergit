@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/8fbf34/cumbergit/pkg/customer"
 	"log"
 	"os"
-	"github.com/8fbf34/cumbergit/pkg/customer"
 )
 
 func main() {
@@ -16,4 +16,3 @@ func main() {
 
 	customer.CollectAndProcess(fileName)
 }
-
